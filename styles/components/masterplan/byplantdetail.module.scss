@@ -1,0 +1,272 @@
+@import "~sass-variables";
+
+.plantTitle {
+    text-align: center;
+    margin-top: 2rem;
+
+    h3 {
+        color: $white !important;
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+    h5 {
+        color: $white !important;
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+}
+
+.plantInfoContainer {
+    display: flex;
+    gap: 1.2rem;
+    padding: 2rem 1.2rem;
+
+    .detailContainer,
+    .taskContainer {
+        width: 50%;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+    .detailContainer {
+        padding: 1.5rem 0;
+        display: flex;
+        gap: 1rem;
+        flex: 2 1;
+
+        .detailImage {
+            background: $white;
+            border-radius: 30px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img{
+                max-width: 100%;
+                max-height: 250px;
+                border-radius: 28px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .detailInfo {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 1rem 0;
+
+            h3{
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: $white !important;
+            }
+
+            h5 {
+                color: $white !important;
+                font-size: 1rem;
+                font-weight: 700;
+                margin-top: 0.5rem;
+            }
+
+            h6 {
+                color: $white !important;
+                font-size: 1rem;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+
+    .taskContainer {
+        padding: 1rem 1.5rem;
+        background-color: $purple;
+        flex: 1 1;
+    
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: $white!important;
+        }
+    
+        input, textarea {
+            border: 1px solid $blueGrey;
+            border-radius: 8px;
+            font-weight: 700;
+            padding: 0.4rem 0.6rem;
+            font-size: 0.8rem;
+            width: 100%;
+            line-height: 1;
+            color: $blue;
+            margin-top: 0.5rem;
+    
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .add{
+            color: $white;
+            font-size: 0.8rem;
+            border: none;
+            background: $blue;
+            border-radius: 9px;
+            padding: 5px;
+            width: 120px;
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;;
+            }
+        }
+    }
+}
+
+.plantOptionsContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    .plantOptionRow{
+        background-color: $white;
+        padding: 1rem;
+        border-radius: 20px;
+        .plantOptionsHeader{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h3{
+                font-size: 1rem;
+                font-weight: 800;
+            }
+            .datebutton{
+                color: $white;
+                font-weight: 700;
+                font-size: 0.8rem;
+                background: $blue;
+                border: none;
+                border-radius: 20px;
+                padding: 0.5rem;
+                width: 160px;
+                text-align: center;
+                float: right;
+                cursor: pointer;
+
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        .plantOptionName{
+            font-size: 0.75rem;
+            font-weight: 700;
+            div{
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                input{
+                    border: 2px solid $blue;
+                    background: transparent;
+                    border-radius: 50px 0 0 50px;
+                    color: $blue;
+                    font-weight: 700;
+                    font-size: 0.7rem;
+                    padding: 2px 5px;
+                    text-align: center;
+                    margin-right: 0.5rem;
+                    width: 40px;
+                    line-height: 1;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                span{
+                    color: $white;
+                    font-size: 0.7rem;
+                    font-weight: 700;
+                }
+            }
+        }
+        .plantOptionsFooter{
+            margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            select{
+                background-color: $blue;
+                color: $white;
+                border-radius: 15px;
+                padding: 3px 5px;
+                font-size: 0.7rem;
+            }
+            .select, button{
+                background-color: $blue;
+                color: $white;
+                border-radius: 15px;
+                padding: 3px 5px;
+                font-size: 0.7rem;
+                border: none;
+            }
+            .buttons{
+                display: flex;
+                button{
+                    background-color: $blue;
+                    color: $white;
+                    border-radius: 15px;
+                    padding: 3px 10px;
+                    font-size: 0.7rem;
+                    border: none;
+                    margin-left: 0.5rem;
+                    width: 65px;
+                }
+            }
+        }
+    }
+}
+
+.buttonsContainer {
+    button {
+        color: $white;
+        font-weight: 700;
+        font-size: 1rem;
+        border: 5px solid $blue;
+        background: $blue;
+        border-radius: 26px;
+        padding: 0.5rem 3rem;
+        min-width: 250px;
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+
+        &:hover {
+            background: $purple;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .plantOptionsContainer{
+       grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .plantInfoContainer {
+        display: block;
+        padding: 2rem 0;
+        .detailContainer,
+        .taskContainer {
+            width: 100%;
+            display: block;
+        }
+    }
+    .plantOptionsContainer{
+        grid-template-columns: 1fr;
+     }
+}

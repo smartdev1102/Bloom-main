@@ -1,0 +1,290 @@
+@import "~sass-variables";
+
+.screen {
+    display: flex;
+    min-height: 100vh;
+    background: $yellow;
+    width: 100%;
+    position: relative;
+}
+
+.header {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: $purple;
+}
+
+.subHeader {
+    font-weight: 800;
+    font-size: 2.3rem;
+    margin-top: 0.8rem;
+    color: $purple;
+}
+
+.container {
+    flex: 1;
+    padding: 1.5rem 0.7rem;
+    width: calc(100% - 80px);
+
+    .profilesContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 2rem;
+
+        .profileContainer {
+            background-color: $blue;
+            padding: 2rem 2rem 4rem;
+            border-radius: 30px;
+            flex: 1 1;
+            text-align: center;
+            position: relative;
+
+            h3 {
+                color: $white;
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-top: 1rem;
+            }
+
+            .profileImage {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                margin: 1rem auto;
+                background-color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                
+                img{
+                    max-height: 200px;
+                    max-width: 100%;
+                    border-radius: 50%;
+                    display: block;
+                    margin: auto;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0.5rem;
+                    object-fit: cover;
+                }
+            }
+
+            .inputContainer {
+                margin-top: 1.5rem;
+
+                input {
+                    border: none;
+                    border-radius: 12px;
+                    font-weight: 600;
+                    padding: 10px;
+                    font-size: 1rem;
+                    width: 60%;
+                    display: block;
+                    margin: 0.5rem auto 0;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                button {
+                    background-color: $purple;
+                    width: 250px;
+                    margin: 2rem auto;
+                }
+            }
+
+            .preferenceContainer{
+                background-color: $purple;
+                border-radius: 30px;
+                padding: 2rem;
+                max-width: 450px;
+                margin: auto;
+                .flexContainers{
+                    margin: 2rem auto 0;
+                    width: 250px;
+                    .flexContainer{
+                        display: flex;
+                        align-items: center;
+                        margin-top: 0.5rem;
+                        label{
+                            margin-left: 1rem;
+                            color: $white;
+                        }
+                        input{
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                    button {
+                        background-color: $blue;
+                        width: 100%;
+                        margin: 2rem auto 0;
+    
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+
+            button{
+                color: $white;
+                font-weight: 700;
+                font-size: 1rem;
+                border: none;
+                border-radius: 16px;
+                padding: 10px;
+                cursor: pointer;
+                &.button1{
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+                &.button2{
+                    background-color: transparent;
+                    width: 250px;
+                    margin-top: 1rem;
+                    position: absolute;
+                    bottom: 1rem;
+                    left: calc(50% - 125px);
+                    &:hover {
+                        background-color: $purple;
+                    }
+                }
+                &.button3{
+                    padding: 1rem;
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    display: block;
+                    margin: 2rem auto 0;
+                    width: 450px;
+                    background-color: $purple;
+                    &.button4{
+                        color: $yellow1;
+                        text-transform: capitalize;
+                    }
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            a{
+                text-decoration: none;
+            }
+
+            h2{
+                color: $yellow1;
+                font-size: 40px;
+                font-weight: 700;
+                margin-top: 1rem;
+            }
+
+            h1{
+                color: $white;
+                font-size: 110px;
+                font-weight: bold;
+                text-transform: uppercase;
+                margin-top: 1rem;
+                margin-bottom: 0;
+            }
+
+            h5{
+                color: $white;
+                font-weight: 700;
+            }
+
+            .proContainer{
+                background-color: $purple;
+                border-radius: 30px;
+                padding: 0 1rem 2rem;
+                max-width: 450px;
+                margin: 2rem auto 0;
+
+                h3{
+                    color: $yellow1;
+                }
+
+                .benefitContainer{
+                    width: 230px;
+                    margin: 1.5rem auto;
+                    text-align: left;
+                    h4{
+                        color: $white;
+                        font-weight: 700;
+                        margin-top: 0.5rem;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.errorText {
+    color: $red;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 576px) {
+    .header{
+        font-size: 1.2rem;
+    }
+    .subHeader{
+        font-size: 1.8rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    .container {
+        .profilesContainer {
+            display: block;
+            .profileContainer {  
+                padding: 2rem 1rem;
+                margin-bottom: 2rem;
+                .inputContainer{
+                    input, button{
+                        width: 80%;
+                    }
+                }
+                .preferenceContainer{
+                    padding: 2rem 1rem;
+                    .flexContainers{
+                        width: 100%;
+                    }
+                }           
+                button{
+                    &.button3{
+                        width: 100%;
+                        font-size: 1.2rem;
+                    }
+                    &.button2{
+                        width: 100%;
+                        position: relative;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+                h2{
+                    font-size: 2rem;
+                }
+                h1{
+                    font-size: 64px;
+                }
+                .proContainer{
+                    img{
+                        width: 150px;
+                    }
+                    .benefitContainer{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

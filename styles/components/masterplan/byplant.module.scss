@@ -1,0 +1,179 @@
+@import "~sass-variables";
+
+.container {
+    padding: 2rem;
+    width: 100%;
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+    h2 {
+        color: $purple;
+        font-weight: 800;
+        font-size: 1.6rem;
+    }
+
+    .searchButton {
+        color: $purple;
+        font-weight: 700;
+        font-size: 0.9rem;
+        border: 5px solid $purple;
+        background: transparent;
+        border-radius: 15px;
+        padding: 4px 1rem;
+        max-width: 50%;
+        text-align: center;
+    }
+}
+
+.plantsContainer {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .plantContainer {
+        width: calc(50% - 0.5rem);
+        background: $blue;
+        border-radius: 30px;
+        display: flex;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        border-radius: 30px;
+
+        .plantImage {
+            background: $yellow;
+            border-radius: 30px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            img{
+                max-width: 100%;
+                max-height: 200px;
+                border-radius: 28px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .plantInfoContainer {
+            flex: 1 1;
+            padding: 1rem 0;
+            .plantInfoHeaderContainer{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 1rem;
+                background-color: $white;
+                border-radius: 20px;
+    
+                h3 {
+                    font-weight: 800;
+                    font-size: 1.3rem;
+                }
+    
+                h4 {
+                    font-size: 0.75rem;
+                    font-weight: 800;
+                    margin: 4px 0;
+                }
+    
+                h5 {
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                }
+    
+                .plantInfoHeader {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+    
+                    h3,
+                    h5 {
+                        margin-bottom: 0;
+                    }
+                }
+    
+                .plantOptionsContainer {
+                    display: flex;
+                    margin-top: 1rem;
+    
+                    h5 {
+                        font-size: 0.8rem;
+                        font-weight: 700;
+                        margin-right: 8px;
+                        margin-bottom: 0;
+                        cursor: pointer;
+    
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+            .plantInfoFooterContainer{
+                margin-top: 1rem;
+                button{
+                    color: $white;
+                    font-weight: 700;
+                    font-size: 0.9rem;
+                    border: 5px solid $purple;
+                    background: $purple;
+                    text-align: center;
+                    border-radius: 15px;
+                    width: 100%;
+                    padding: 5px 1.7rem;                    
+                    cursor: pointer;
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .plantsContainer {
+        display: grid;
+        .plantContainer{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .plantsContainer {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        padding: 1.5rem;
+    }
+    .headerContainer {
+        display: block;
+        text-align: center;
+        .searchButton {
+            max-width: 100%;
+        }
+    }
+    .plantsContainer {
+        .plantContainer{
+            display: block;
+            .plantImage{
+                height: 150px;
+            }
+        }
+    }
+}

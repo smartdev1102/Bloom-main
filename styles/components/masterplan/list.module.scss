@@ -1,0 +1,188 @@
+@import "~sass-variables";
+
+.container {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    height: 100%;
+    max-height: 100%;
+    flex: 1;
+}
+
+.tasksContainer {
+    flex: 1;
+    background: $blue;
+    height: 100%;
+    padding: 1rem 0.8rem 0 0.8rem;
+    border-radius: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.tasksContainerTitle {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: $white;
+    margin-top: 0.5rem;
+
+    &.overdue {
+        color: $red;
+    }
+}
+
+.tasksScrollContainer {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    padding-top: 1rem;
+    overflow-y: auto;
+}
+
+.taskContainer {
+    width: 100%;
+    border-radius: 25px;
+    background: $yellow;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    height: min-content;
+}
+
+.allTaskContainer {
+    width: 100%;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    position: relative;
+}
+
+.taskInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;    
+
+    h2 {
+        font-weight: 800;
+        font-size: 1rem;
+        margin-bottom: 3px;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 0.8rem;
+        color: $black;
+        margin-bottom: 0;
+        text-align: center;
+
+        &.overdue {
+            color: $red;
+        }
+    }
+}
+
+.taskCap {
+    width: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.overdue {
+        background: $red;
+    }
+
+    &.today {
+        background: $darkYellow;
+    }
+
+    &.tomorrow {
+        background: $grey;
+    }
+
+    &.all{
+        display: none;
+    }
+
+    .check{
+        color: $white;
+        width: 24px;
+        height: 24px;
+        border: 2px solid $white;
+        border-radius: 50%;
+        padding: 0 0 0 3px;
+    }
+}
+
+.thisWeekContainer {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        font-weight: 800;
+        font-size: 2.2rem;
+        margin: 0 0 1rem 0;
+    }
+}
+
+.thisWeekScrollContainer {
+    width: 100%;
+    overflow: auto;
+    max-height: 600px;
+}
+
+.thisWeekTaskContainer {
+    background: $blue;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    h3 {
+        color: $white;
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 0;
+    }
+
+    h4 {
+        margin-top: 6px;
+        margin-bottom: 0;
+        color: $white;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .thisWeekContainer {
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+    .tasksContainerTitle {
+        font-size: 1.5rem;
+    }
+}

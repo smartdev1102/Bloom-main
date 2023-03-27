@@ -1,0 +1,167 @@
+@import "~sass-variables";
+
+.paymentTitle {
+    color: $white;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.paymentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.freeContainer {
+    background-color: $yellow;
+    border-radius: 32px;
+    text-align: center;
+    width: 300px;
+    height: 422px;
+    padding: 18px;
+    margin: 40px 30px;
+
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+
+    h5 {
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+}
+
+.proContainer {
+    background-color: $darkBlue;
+    color: $white;
+    border-radius: 32px;
+    text-align: center;
+    width: 600px;
+    height: 422px;
+    padding: 0 18px;
+    margin: 40px 30px;
+    display: flex;
+    align-items: center;
+
+    h1,
+    h4 {
+        color: $white;
+        font-weight: bold;
+    }
+
+    h1 {
+        font-size: 110px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+}
+
+.proRightContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    margin-left: 32px;
+
+    .proContainerTexts {
+        text-align: left;
+
+        h4 {
+            margin: 20px 0;
+            font-size: 1rem;
+
+            span {
+                color: $yellow1;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.freeText {
+    margin: 20px 0;
+}
+
+.proButtonContainer {
+    background: $blue;
+    padding: 0.9rem 3.2rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    h5 {
+        color: $yellow1;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 36px;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .paymentContainer {
+        display: block;
+    }
+
+    .paymentContainer {
+        display: block;
+    }
+
+    .freeContainer {
+        width: 100%;
+        height: auto;
+        margin: 40px 0;
+        padding: 18px 18px 30px;
+
+        img {
+            width: 150px;
+        }
+
+        .nextButtonContainer {
+            width: 300px;
+        }
+    }
+
+    .proContainer {
+        width: 100%;
+        height: auto;
+        margin: 40px 0;
+        display: block;
+        padding: 18px;
+
+        img {
+            width: 150px;
+        }
+
+        h1 {
+            font-size: 64px;
+        }
+    }
+
+    .proRightContainer {
+        height: auto;
+        margin: auto;
+        width: 300px;
+
+        .proContainerTexts {
+            margin: 1rem 0;
+        }
+    }
+
+    .proButtonContainer {
+        margin: 0 0 2rem 0;
+
+        h5 {
+            font-size: 24px;
+        }
+    }
+}

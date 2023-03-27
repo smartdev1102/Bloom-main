@@ -1,0 +1,196 @@
+@import "styles/fonts.scss";
+@import "styles/variables.scss";
+
+* {
+    box-sizing: border-box;
+    font-family: "Mont", sans-serif;
+    font-weight: 500;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    color: $black;
+}
+
+.customPlantModal .modal-dialog {
+    max-width: 950px !important;
+    .modal-content {
+        .modal-header {
+            justify-content: flex-start;
+        }
+    }
+}
+
+.modal-dialog {
+    .modal-content {
+        background-color: $blue !important;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $white;
+        }
+
+        .modal-header {
+            border-bottom: 0 !important;
+            padding-bottom: 0;
+            justify-content: center;
+            .modal-title{
+                font-size: 2rem;
+            }
+        }
+
+        .modal-footer {
+            border-top: 0 !important;
+        }
+    }
+}
+
+.modifyPlanModal .modal-dialog {
+    max-width: 1200px !important;
+
+    .modal-header {
+        h5 {
+            color: $white !important;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+    }
+
+    .modal-content {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $black;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.react-datepicker-popper{
+    z-index: 100!important;
+}
+
+.react-datepicker__navigation-icon{
+    top: 5px!important;
+}
+
+.settingMapContainer{
+    .map{
+        left: 0;
+        top: 0;
+    }
+}
+
+.planMapContainer{
+    .map{
+        width: 50%!important;
+        right: 0;
+        top: 0;
+    }
+}
+
+.progress{
+    width: 50%;
+    margin: auto;
+}
+
+.spinner-border{
+    position: absolute;
+    left: calc(50% - 1rem);
+    top: calc(50% - 1rem);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+@media screen and (max-width: 576px) {
+    .modal-dialog {
+        .modal-content {
+            .modal-header {
+                .modal-title{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+
+.custom-swal .swal-modal {
+  background-color: $blue !important;
+  border-radius: 50px;
+}
+
+.custom-swal .swal-title {
+  font-size: 1.6rem;
+  color: $black;
+  font-weight: 800;
+}
+
+.custom-swal .swal-text {
+  font-size: 1rem;
+  color: $black;
+}
+
+.custom-swal .swal-button {
+  background-color: $purple;
+  color: $white;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 5px solid $purple;
+  border-radius: 15px;
+  padding: 3px 0;
+  cursor: pointer;
+  margin: 0 10px;
+  width: 150px;
+  text-transform: none;
+}
+
+.custom-swal .swal-button:hover {
+  background-color: $blue;
+  border-color: $blue;
+}
+
+.custom-swal .swal-button--cancel {
+  background-color: $red !important; /* Replace with your desired cancel button color */
+  border-color: $red !important;
+  color: $white;
+}
+
+.custom-swal .swal-button--cancel:hover {
+  background-color: $purple !important; /* Replace with your desired cancel button hover color */
+  border-color: $purple !important;
+}

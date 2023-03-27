@@ -1,0 +1,168 @@
+@import "~sass-variables";
+
+.screen {
+    min-height: 100vh;
+    background: $blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    
+    h4 {
+         margin-top: 1.5rem;
+        font-weight: 700;
+        font-size: 1rem;
+        text-align: center;
+        a{
+            font-weight: 700;
+            cursor: pointer;
+        }
+        color: white;
+    }
+        
+        
+}
+
+.logo {
+    width: 10rem;
+}
+
+.formContainer {
+    background: $yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0;
+    border-radius: 54px;
+    padding: 3.5rem 2rem;
+    width: 35rem;
+
+    h2 {
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    h4{
+        margin-top: 1.5rem;
+        font-weight: 700;
+        font-size: 1rem;
+        text-align: center;
+        a{
+            font-weight: 700;
+            color: $green!important;
+            cursor: pointer;
+        }
+    }
+
+    small{
+        font-weight: 800;
+    }
+}
+
+.input {
+    border: none;
+    border-radius: 20px;
+    padding: 1rem;
+    font-size: 1.1rem;
+    width: 100%;
+    margin: 0 0 0.5rem 0;
+    color: $black;
+
+    &::placeholder {
+        color: $grey;
+        opacity: 1;
+    }
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
+
+.formDetailsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+
+    .detailsInputsContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.detailsProfilePictureContainer {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+    position: relative;
+    img{
+        max-height: 8rem;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+.detailsLocationContainer {
+    width: 50%;
+    margin: 1rem 0;    
+}
+
+.nextButtonContainer {
+    background: $darkBlue;
+    padding: 1.3rem 5rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    h5 {
+        color: $white;
+        font-weight: 600;
+        font-size: 1.1rem !important;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+
+    img{
+        width: 30px;
+    }
+}
+
+.errorText {
+    color: $red;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 576px) {
+    .formContainer {
+        width: 100%;
+        padding: 3.5rem 1rem;
+    }
+    .detailsLocationContainer{
+        width: 100%;
+    }
+    .formDetailsContainer{
+        display: block;
+    }
+}

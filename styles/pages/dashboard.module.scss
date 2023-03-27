@@ -1,0 +1,482 @@
+@import "~sass-variables";
+
+.buttonContainer {
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.button {
+    background: $blue;
+    border: none;
+    border-radius: 15px;
+    color: $white;
+    cursor: pointer;
+    font-size: 1.5rem; // Adjust the font size to match h2
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    text-transform: capitalize;
+    flex-basis: calc(50% - 0.5rem);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    height: 100px; // Set a fixed height for all buttons
+    box-sizing: border-box;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .button {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.2rem;
+    }
+}
+
+
+.icon {
+  display: block;
+  height: 50%;
+  margin: 0 auto;
+}
+
+.buttonText {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.button:hover .buttonText {
+  opacity: 1;
+}
+
+.button:hover .icon {
+  opacity: 0;
+}
+
+
+
+.screen {
+    display: flex;
+    min-height: 100vh;
+    background: $yellow;
+    width: 100%;
+    position: relative;
+}
+
+.container {
+    flex: 1;
+    padding: 1.5rem;
+    width: calc(100% - 14rem);
+}
+
+.header {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: $purple;
+}
+
+.subHeader {
+    font-weight: 800;
+    font-size: 2.3rem;
+    margin-top: 0.8rem;
+    color: $purple;
+    margin-bottom: 2rem;
+}
+
+.dashboardRow {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.greetingContainer {
+    background: $blue;
+    border-radius: 48px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+
+    h3 {
+        font-weight: 800;
+        font-size: 1.6rem;
+        color: $white;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        color: $white;
+    }
+}
+
+.newsContainer {
+    background: $white;
+    border-radius: 48px;
+    border: 10px $blue;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+
+    h3 {
+        font-weight: 800;
+        font-size: 1.6rem;
+        color: $black;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        color: $black;
+    }
+}
+
+.weatherContainer {
+    background: $white;
+    border-radius: 48px;
+    flex: 0.5;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .weatherIcon {
+        font-size: 2.5rem;
+        color: $yellow1;
+        margin-bottom: 15px;
+    }
+
+    h5 {
+        font-weight: 600;
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+    }
+
+    h6 {
+        font-size: 1.1rem;
+    }
+}
+
+.statContainer {
+    background: $white;
+    border-radius: 48px;
+    flex: 1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-weight: 800;
+        font-size: 3.5rem;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    &.tomorrow {
+        background: $green;
+
+        h2,
+        h3 {
+            color: $white;
+        }
+    }
+
+    &.overdue {
+        background: $red;
+
+        h2,
+        h3 {
+            color: $white;
+        }
+    }
+
+    &.wide {
+        flex: 1.8;
+    }
+}
+
+.blooms {
+    background: $blue;
+    border-radius: 48px;
+    padding: 2rem 8rem 5rem;
+    text-align: center;
+    flex: 2 1;
+
+    h2 {
+        font-weight: 800;
+        font-size: 2.5rem;
+        margin-bottom: 0.8rem;
+        color: $white;
+        text-transform: uppercase;
+    }
+
+    h4 {
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+        color: $white;        
+    }
+
+    >h4{
+        text-transform: uppercase;
+    }
+
+    .bloomsContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        .bloomContainer {
+            position: relative;
+            background-color: #323232b5;
+            border-radius: 15px;
+
+            .background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.5;
+                border-radius: 15px;
+            }
+
+            h2 {
+                font-weight: 800;
+                font-size: 1.6rem;
+                margin-bottom: 1.8rem;
+                color: $white;
+                text-transform: uppercase;
+            }
+
+            .bloomInfoContainer {
+                text-align: center;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem 0.5rem;
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                h4 {
+                    margin-bottom: 0;
+                    font-size: 1.3rem;
+                    text-transform: uppercase;
+                    z-index: 10;
+                }
+
+                h5 {
+                    color: $white;
+                    margin-bottom: 1rem;
+                    font-size: 0.8rem;
+                    z-index: 10;
+                }
+
+                .bloomButton {
+                    background: $blue;
+                    border: none;
+                    font-size: 1rem;
+                    font-weight: 800;
+                    padding: 10px 15px;
+                    color: $white;
+                    text-transform: uppercase;
+                    border-radius: 10px;
+                    z-index: 10;
+                }
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    object-fit: cover;
+                    opacity: 0.2;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+}
+
+.progressContainer {
+    background: $blue;
+    border-radius: 48px;
+    flex: 1;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    h2 {
+        font-weight: 800;
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+        color: $white;
+    }
+}
+
+.progressBarsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    h5 {
+        font-weight: 800;
+        margin-bottom: 5px;
+    }
+}
+
+.progressBarContainer {
+    width: 100%;
+    height: 3rem;
+    background: $yellow;
+    border-radius: 50px;
+    border: 3px solid $black;
+    position: relative;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+
+    .progressBarProgress {
+        left: 0;
+        height: 100%;
+        background: $black;
+        border-radius: 48px;
+    }
+
+    h5 {
+        font-weight: 800;
+        font-size: 1.2rem;
+        margin-bottom: 0;
+        position: absolute;
+        color: $white;
+        text-align: center;
+    }
+}
+
+.shareButton {
+    background: $black;
+    border: none;
+    border-radius: 17px;
+    color: $white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.dashboardImagesContainer {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .dashboardImage {
+        flex: 1;
+        background: $white;
+        border-radius: 48px;
+    }
+}
+
+.row1 {
+    display: flex;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 1280px) {
+    .dashboardRow {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .blooms{
+        padding: 2rem;
+        .bloomsContainer {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .row1 {
+        grid-template-columns: 1fr;
+    }
+    .blooms{
+        margin-bottom: 1rem;
+        h2{
+            font-size: 1.8rem;
+        }
+    }
+    .progressContainer {
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container{
+        width: calc(100% - 80px);
+    }
+    .dashboardRow {
+        grid-template-columns: 1fr;
+        border-radius: 20px;
+    }
+    .greetingContainer {
+        padding: 1rem;
+        border-radius: 20px;
+    }
+    .newsContainer {
+        padding: 1rem;
+        border-radius: 20px;
+    }
+    .weatherContainer, .statContainer{
+        border-radius: 20px;
+    }
+    .header{
+        font-size: 1.2rem;
+    }
+    .subHeader{
+        font-size: 1.8rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    .progressContainer, .blooms {
+        padding: 2rem 1rem;
+        h5{
+            font-size: 1rem;
+        }
+    }
+    .blooms{
+        .bloomsContainer {
+            grid-template-columns: 1fr;
+        }
+    }
+}

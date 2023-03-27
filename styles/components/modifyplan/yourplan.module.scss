@@ -1,0 +1,165 @@
+@import "~sass-variables";
+
+.container {
+    height: 100vh; // Set the container height to 100vh
+    width: 16rem;
+    background: $blue;
+    padding-top: 2rem;
+    position: sticky;
+    top: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden; // Hide any overflowing content
+
+
+.scrollContainer {
+    flex: 1;
+    width: 100%;
+    height: 100%; // Set the height to 100% of the parent container
+    overflow-y: auto; // Enable vertical scrolling
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+
+    h2 {
+        color: $white;
+        font-weight: 700;
+        margin-top: 1.5rem;
+    }
+
+    .planSettings {
+        margin-bottom: 2rem;        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        border: 5px solid transparent;
+        background-color: transparent;
+
+        h3 {
+            color: $white;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0;
+            border-radius: 15px;
+            padding: 0.3rem 2rem;
+
+            &:hover {
+                background-color: $white;
+                color: $blue;
+            }
+        }     
+    }
+    
+}
+
+
+
+.planContainer {
+    background: $white;
+    margin: 0 0.6rem 1rem 0.6rem;
+    padding: 1rem;
+    border-radius: 20px;
+    position: relative;
+
+    .plantHoverText {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        border-radius: 20px;
+        background: rgba($blue, 0.54);
+
+        button {
+            color: $white;
+            font-weight: 700;
+            font-size: 1rem;
+            border: 5px solid $blue;
+            background: $blue;
+            border-radius: 9px;
+            padding: 0px 1rem;
+            cursor: pointer;
+            margin: 0 5px;
+
+            &:hover {
+                background: $purple;
+                border-color: $purple;
+            }
+        }
+    }
+}
+
+.planHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    h3 {
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin-bottom: 0;
+        color: $purple;
+    }
+}
+
+.planSpecies {
+    font-size: 0.7rem;
+    font-weight: 800;
+    margin-top: 2px;
+    color: $purple;
+}
+
+.planOptionsContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+
+    h5 {
+        color: $purple;
+        font-size: 0.8rem;
+        font-weight: 700;
+        margin-right: 8px;
+        margin-bottom: 0;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.planNotes {
+    color: $purple;
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 0.7rem;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 12rem;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .container {
+        width: calc(100% - 3rem);
+        margin: 1.5rem;
+        border-radius: 10px;
+    }
+}

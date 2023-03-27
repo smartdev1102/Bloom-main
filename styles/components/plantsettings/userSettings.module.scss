@@ -1,0 +1,73 @@
+@import "~sass-variables";
+
+.userSettingsContainer {
+    padding: 1rem;
+    .userSettingsPaper {
+        flex: 1;
+        border-radius: 30px;
+        padding: 1rem 0;
+    
+        h2 {
+            font-weight: 700;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .userSettingsInputRow {
+            margin-bottom: 10px;
+        
+            input {
+                border: 1px solid $blueGrey;
+                border-radius: 12px;
+                font-weight: 800;
+                padding: 0.6rem 1rem;
+                font-size: 1.3rem;
+                width: 100%;
+                line-height: 1;
+                color: $blue;
+                margin-bottom: 10px;
+        
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .mapContainer{
+                width: 100%;
+                height: 150px;
+                background-color: $white;
+                border-radius: 12px;
+                position: relative;
+                margin: 1.5rem 0;
+
+                .map{
+                    width: 100% !important;
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }
+
+        small{
+            color: $white;
+            font-weight: 700;
+        }
+
+        .settingsButton {
+            background-color: $blue;
+            border: none;
+            color: $white;
+            font-weight: 700;
+            font-size: 1.5rem;
+            padding: 10px 2rem;
+            border-radius: 50px;
+            margin-top: 1rem;
+            width: 100%;
+            cursor: pointer;
+            &:hover{
+                background-color: $purple;
+            }
+        }
+    }
+}
