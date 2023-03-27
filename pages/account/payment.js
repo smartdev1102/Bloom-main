@@ -47,10 +47,10 @@ const Payment = () => {
         const stripe = await getStripe();
     
         await stripe.redirectToCheckout({
-            mode: "payment",
+            mode: "subscription",
             lineItems: [
                 {
-                    price: "price_1Mn7y1EVmyPNhExzI7SnVpph",
+                    price: 'price_1MqLstEVmyPNhExzPbJ7QXHY',
                     quantity: 1,
                 },
             ],

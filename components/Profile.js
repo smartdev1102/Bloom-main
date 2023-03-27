@@ -142,7 +142,7 @@ const Profile = () => {
             mode: 'payment',
             lineItems: [
                 {
-                    price: "price_1Mn7y1EVmyPNhExzI7SnVpph",
+                    price: 'price_1MqLstEVmyPNhExzPbJ7QXHY',
                     quantity: 1
                 }
             ],
