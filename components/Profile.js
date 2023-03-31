@@ -139,7 +139,7 @@ const Profile = () => {
         const stripe = await getStripe()
 
         await stripe.redirectToCheckout({
-            mode: 'payment',
+            mode: 'subscription',
             lineItems: [
                 {
                     price: 'price_1MqLstEVmyPNhExzPbJ7QXHY',
