@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from "react";
 import { Modal, ModalBody } from "reactstrap";
 import { useRouter } from "next/router";
@@ -85,24 +84,6 @@ const Sidebar = (props) => {
                 <div className={`${styles.link} ${router.pathname === "/masterplan" ? styles.active : styles.deactive}`} onClick={() => router.push("/masterplan")}>
                     <h3>{props.plan}</h3>
                 </div>
-                {/* {
-                    props.isPro ? (
-                        <>
-                            {plans.map((plan, i) => (
-                                <>
-                                    <div className={`${styles.link} ${router.pathname === "/masterplan" ? styles.active : styles.deactive}`}>
-                                        <h3>{plan.name}</h3>
-                                    </div>
-                                </>
-                            ))}
-                            <button onClick={() => openPlanSettingsModal()}>Add Plan</button>
-                        </>                        
-                    ) : (
-                        <div className={`${styles.link} ${router.pathname === "/masterplan" ? styles.active : styles.deactive}`} onClick={() => router.push("/masterplan")}>
-                            <h3>{props.plan}</h3>
-                        </div>
-                    )
-                } */}
             </div>
             <div className={styles.mobile}>
                 <img src={"/assets/logo.png"} alt="logo" />
