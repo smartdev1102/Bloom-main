@@ -1,9 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import Link from 'next/link'
 import { userService } from "services";
-import bcrypt from "bcryptjs";
 import { Spinner } from "reactstrap";
 
 import { loadStripe } from "@stripe/stripe-js";
